@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TaskService} from './task.service';
-import {TaskIsDonePipe} from './task-is-done.pipe';
+import {TaskService} from './service/task.service';
+import {TaskIsDonePipe} from './pipe/task-is-done.pipe';
 import * as _ from 'lodash';
 import {MdDialog, MdDialogRef} from '@angular/material';
 import {DeleteDialogComponent} from '../delete-dialog/delete-dialog.component';

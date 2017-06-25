@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Task} from './Task';
+import {Task} from '../Task';
 
 @Pipe({
   name: 'taskIsDone'

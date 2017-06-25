@@ -18,8 +18,8 @@ import {MdSlideToggleModule} from '@angular/material';
 import {MdToolbarModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
 import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
-import {TaskService} from './task/task.service';
-import { TaskIsDonePipe } from './task/task-is-done.pipe';
+import {TaskService} from './task/service/task.service';
+import { TaskIsDonePipe } from './task/pipe/task-is-done.pipe';
 import {MdIconModule, MdDialogModule} from '@angular/material';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 
