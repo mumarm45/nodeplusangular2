@@ -16,6 +16,7 @@ taskList = [];
 title= '' ;
 taskDone = [];
 taskNotDone = [];
+task = {};
 
   constructor(private taskService: TaskService, public mdDialog: MdDialog, public snackBar: MdSnackBar) { }
 
@@ -26,6 +27,9 @@ taskNotDone = [];
    this.taskDone = this.taskList.filter(tsk => tsk.isDone);
    this.taskNotDone = this.taskList.filter(tsk => !tsk.isDone);
    });
+  }
+  setTask(task){
+this.task = task;
   }
 
   addNewTask(newValue) {
@@ -56,13 +60,19 @@ this.taskNotDone.push(res);
          }
      });
   }
-  DoneTask(event) {
+  DoneTask(event, type) {
     if (event.dragData) {
       const task = event.dragData;
-         task.isDone = true;
+      if (task.isDone && type === 'inprogress'){
+           task.isDone = false;
+      }else if(!task.isDone && type === 'done') {
+        task.isDone = true;
+      }else{
+        return;
+      }
         this.taskService.update(task._id, task).subscribe(res => {
           this.removeTaskFromList(task._id,!task.isDone);
-        this.taskDone.push(task);
+        type === 'inprogress' ? this.taskNotDone.push(task):this.taskDone.push(task);
         this.snackBar.open('Task has been moved to Done', null, {
       duration: 2000,
     });
