@@ -6,8 +6,8 @@ import {TaskAddComponent} from './task-add/task-add.component';
 
 
 const appRoutes: Routes  = [
-    {path:'list',component:TaskComponent},
-    {path:'add',component:TaskAddComponent},
+    {path:'list',component: TaskAddComponent},
+    {path:'add',component:TaskComponent},
     {path:'',redirectTo:'/list',pathMatch:'full'}
 ];
 

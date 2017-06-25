@@ -20,6 +20,7 @@ Before running the backend, first we will run the ng build command and all the f
 - Angular-material 2
 - Angular-cli 
 - lodash
+- ng2-chart (chart)
 
 
 

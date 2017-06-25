@@ -1,3 +1,32 @@
-<p>
-  task-add works!
-</p>
+<!--<md-card>
+
+    <div>
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <md-card-content>
+        content
+    </md-card-content>
+</md-card>-->
+<div fxLayout="row wrap" class="colored box nopad">
+    <md-card fxFlex="33.33%">
+        <md-card-header>
+            <md-card-title> Doughnut chart </md-card-title>
+        </md-card-header>
+
+        <md-card-content>
+            <div>
+                <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" legend="true" (chartClick)="chartClicked($event) "></canvas>
+            </div>
+        </md-card-content>
+    </md-card>
+
+    <md-card>
+        <md-card-header>
+            <md-card-title> Pie chart </md-card-title>
+        </md-card-header>
+        <div>
+            <canvas baseChart [data]="doughnutChartData " [labels]="doughnutChartLabels " [chartType]="pieChartType " (chartHover)="chartHovered($event) " (chartClick)="chartClicked($event) "></canvas>
+        </div>
+    </md-card>
+
+</div>
