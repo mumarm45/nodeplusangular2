@@ -22,15 +22,17 @@ Before running the backend, first we will run the ng build command and all the f
 - Angular-flex-layout
 - lodash
 - ng2-chart (chart)
-Dashboard using Charts
+- Dashboard using Charts
 ![Dashboard](https://github.com/mumarm45/nodeplusangular2/blob/master/view/dashboard.png "Preview Image Dashboard")
-Task drag drop
+- Task drag drop
 ![Dashboard](https://github.com/mumarm45/nodeplusangular2/blob/master/view/tasks.png "Task Management sample")
 
 
 ## ###########
 ## How to run application server
-- npm install angualr-cli
+
+- npm install angular-cli
+
 - npm install 
 
 - ng build
