@@ -1,5 +1,5 @@
 # Node and Angular2
-This project is for learning purpose. In this project, I have used the nodejs, angular2. 
+This project is for learning purpose. 
 
 In this project I have used the nodejs for restfull api and to run the client side angular2 application which consums the api. 
 
