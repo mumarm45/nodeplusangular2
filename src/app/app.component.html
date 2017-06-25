@@ -1,0 +1,16 @@
+<md-sidenav-container>
+    <md-toolbar color="primary">
+        <span>
+         <md-slide-toggle [(ngModel)]="slideToggleModel"></md-slide-toggle>
+        </span>
+        <span>Task Manager</span>
+
+    </md-toolbar>
+    <md-sidenav mode="side" opened="{{slideToggleModel}}">
+        <app-app-sidebar [checked]="slideToggleModel"></app-app-sidebar>
+    </md-sidenav>
+    <div class="my-content">
+        <router-outlet></router-outlet>
+    </div>
+
+</md-sidenav-container>

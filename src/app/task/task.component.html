@@ -1,0 +1,28 @@
+<div fxLayout="row wrap" class="colored box nopad">
+
+    <div fxFlex="33.33%">
+        <md-list>
+            <md-list-item *ngFor="let task of taskList ,let lst= last">
+                <span>{{task.title}}</span>
+                <button md-icon-button (click)="removeTask(task._id)"><md-icon>remove</md-icon></button>
+            </md-list-item>
+            <md-list-item>
+                <md-input-container class="example-full-width">
+                    <input mdInput name="title" [(title)]="title" placeholder="Add new task" value="{{title}}" (blur)="addNewTask($event.target.value)">
+                </md-input-container>
+            </md-list-item>
+
+        </md-list>
+    </div>
+    <div fxFlex="33.33%">
+        <md-list>
+            <md-list-item *ngFor="let task of taskList | taskIsDone:true ,let lst= last">
+                <span>{{task.title}}</span>
+            </md-list-item>
+
+
+        </md-list>
+    </div>
+
+
+</div>
