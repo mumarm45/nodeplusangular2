@@ -24,12 +24,12 @@ Before running the backend, first we will run the ng build command and all the f
 
 
 ## ###########
-npm install angualr-cli
-npm install 
+- npm install angualr-cli
+- npm install 
 
-ng build
+- ng build
 
-node app 
+- node app 
 
 If everything works fine then "App server running on 3000". 
 
