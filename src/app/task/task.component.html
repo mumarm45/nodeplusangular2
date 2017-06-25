@@ -1,28 +1,41 @@
 <div fxLayout="row wrap" class="colored box nopad">
 
-    <div fxFlex="33.33%">
-        <md-list>
-            <md-list-item *ngFor="let task of taskList ,let lst= last">
-                <span>{{task.title}}</span>
-                <button md-icon-button (click)="removeTask(task._id)"><md-icon>remove</md-icon></button>
-            </md-list-item>
-            <md-list-item>
-                <md-input-container class="example-full-width">
-                    <input mdInput name="title" [(title)]="title" placeholder="Add new task" value="{{title}}" (blur)="addNewTask($event.target.value)">
-                </md-input-container>
-            </md-list-item>
+    <md-card fxFlex="33.33%">
+        <md-card-title>
+            Inprogress Tasks
+        </md-card-title>
+        <md-card-content>
+            <md-list>
+                <md-list-item draggable [dragData]="task" *ngFor="let task of taskNotDone ,let lst= last">
+                    <span>{{task.title}}</span>
+                    <button md-icon-button (click)="removeTask(task._id,task.isDone)"><span mdTooltip="Delete"></span> <md-icon>delete</md-icon></button>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
 
-        </md-list>
-    </div>
-    <div fxFlex="33.33%">
-        <md-list>
-            <md-list-item *ngFor="let task of taskList | taskIsDone:true ,let lst= last">
-                <span>{{task.title}}</span>
-            </md-list-item>
+        <md-card-footer>
+            <md-input-container class="example-full-width">
+                <input mdInput name="title" [(title)]="title" placeholder="Add new task" value="{{title}}" (keyup.enter)="addNewTask($event.target.value)">
+            </md-input-container>
+        </md-card-footer>
+    </md-card>
+
+    <md-card fxFlex="33.33%" droppable (onDrop)="DoneTask($event)">
+        <md-card-title>
+            Done Tasks
+        </md-card-title>
+        <md-card-content>
+            <md-list>
+                <md-list-item *ngFor="let task of taskDone  ,let lst= last">
+                    <span>{{task.title}}</span>
+                    <button md-icon-button (click)="removeTask(task._id,task.isDone)"><span mdTooltip="Delete"></span> <md-icon>delete</md-icon></button>
+                </md-list-item>
 
 
-        </md-list>
-    </div>
+            </md-list>
+        </md-card-content>
 
+
+    </md-card>
 
 </div>

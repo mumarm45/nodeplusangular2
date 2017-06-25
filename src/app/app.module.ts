@@ -20,8 +20,9 @@ import {MdInputModule} from '@angular/material';
 import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 import {TaskService} from './task/service/task.service';
 import { TaskIsDonePipe } from './task/pipe/task-is-done.pipe';
-import {MdIconModule, MdDialogModule} from '@angular/material';
+import {MdIconModule, MdDialogModule, MdCardModule, MdTooltipModule, MdSnackBarModule} from '@angular/material';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import { Ng2DragDropModule } from 'ng2-drag-drop';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
     MdListModule,
     MdSlideToggleModule,
     MdIconModule,
-    MdToolbarModule, MdDialogModule
+    MdToolbarModule, MdDialogModule, Ng2DragDropModule, MdCardModule, MdTooltipModule, MdSnackBarModule
   ],
   providers: [TaskService],
   bootstrap: [AppComponent],

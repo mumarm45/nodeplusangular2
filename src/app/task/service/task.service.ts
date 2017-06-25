@@ -21,5 +21,10 @@ private  url = 'http://localhost:3000/api/tasks';
             return res.json();
      });
    }
+   update(id, data) {
+     return this.http.put(`${this.url}/${id}`, data).map(res => {
+           return res.json();
+     });
+   }
 
 }

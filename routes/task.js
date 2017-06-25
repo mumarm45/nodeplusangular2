@@ -33,6 +33,7 @@ router.get('/tasks/:id', (req, res, next) => {
 router.post('/tasks', (req, res, next) => {
 
     var task = req.body;
+    task.createdByDate = new Date();
     if (!task.title || task.isDone) {
         res.status(400);
         res.jos({ 'err': "Data is not correct" });
@@ -71,9 +72,9 @@ router.put('/tasks/:id', (req, res, next) => {
     if (task.title) {
         updateTask.title = task.title;
     }
-    if (!updateTask.title || updateTask.isDone) {
+    if (!updateTask.title) {
         res.status(400);
-        res.jos({ 'err': "Data is not correct" });
+        res.json({ 'err': "Data is not correct" });
     } else {
         db.task.update({ _id: mongojs.ObjectId(req.params.id) }, updateTask, (err, task) => {
             if (err) {
