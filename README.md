@@ -21,7 +21,10 @@ Before running the backend, first we will run the ng build command and all the f
 - Angular-cli 
 - lodash
 - ng2-chart (chart)
-
+Dashboard using Charts
+![Dashboard](https://github.com/mumarm45/nodeplusangular2/blob/master/view/dashboard.png "Preview Image Dashboard")
+Task drag drop
+![Dashboard](https://github.com/mumarm45/nodeplusangular2/blob/master/view/tasks.png "Task Management sample")
 
 
 ## ###########
