@@ -1,9 +1,9 @@
-# Node and Angular2
+## Node and Angular2
 This project is for learning purpose. 
 
 In this project I have used the nodejs for restfull api and to run the client side angular2 application which consums the api. 
 
-#Backend 
+## Backend 
 In nodejs I have used the 
  - Node
  - Mongojs 
@@ -15,7 +15,7 @@ Before running the backend, first we will run the ng build command and all the f
 
 
 
-#Frontend
+## Frontend
 - Angular2
 - Angular-material 2
 - Angular-cli 
@@ -23,7 +23,7 @@ Before running the backend, first we will run the ng build command and all the f
 
 
 
-###########
+## ###########
 npm install angualr-cli
 npm install 
 
@@ -33,7 +33,7 @@ node app
 
 If everything works fine then "App server running on 3000". 
 
-###########
+## ###########
 
 
 
@@ -43,7 +43,7 @@ If everything works fine then "App server running on 3000".
 
 
 
-####################
+## ##################
 
 ## Development server for angualr 2
 
