@@ -19,6 +19,7 @@ Before running the backend, first we will run the ng build command and all the f
 - Angular2
 - Angular-material 2
 - Angular-cli 
+- Angular-flex-layout
 - lodash
 - ng2-chart (chart)
 Dashboard using Charts
@@ -28,6 +29,7 @@ Task drag drop
 
 
 ## ###########
+## How to run application server
 - npm install angualr-cli
 - npm install 
 
