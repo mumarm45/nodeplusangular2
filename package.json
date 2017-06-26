@@ -33,7 +33,9 @@
     "lodash": "^4.17.4",
     "ng2-charts": "^1.6.0",
     "ng2-drag-drop": "^2.0.1",
-    "rxjs": "^5.1.0",
+    "rxjs": "^5.4.1",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

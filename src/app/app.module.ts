@@ -24,6 +24,8 @@ import {MdIconModule, MdDialogModule, MdCardModule, MdTooltipModule, MdSnackBarM
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { ChartsModule } from 'ng2-charts';
+import { ChatRoomComponent } from './chat-room/chat-room.component';
+import {ChatServiceService} from './chat-room/service/chat-service.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ChartsModule } from 'ng2-charts';
     TaskAddComponent,
     AppSidebarComponent,
     TaskIsDonePipe,
-    DeleteDialogComponent
+    DeleteDialogComponent,
+    ChatRoomComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,7 @@ import { ChartsModule } from 'ng2-charts';
     MdToolbarModule, MdDialogModule, Ng2DragDropModule, MdCardModule, MdTooltipModule, MdSnackBarModule,
     ChartsModule
   ],
-  providers: [TaskService],
+  providers: [TaskService,ChatServiceService],
   bootstrap: [AppComponent],
  entryComponents: [DeleteDialogComponent]
 })

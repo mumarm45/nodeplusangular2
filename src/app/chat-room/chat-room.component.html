@@ -1,0 +1,13 @@
+<p *ngFor="let msg of messsages">
+    {{msg}}
+</p>
+
+
+
+<form (ngSubmit)="sendMessage(message)">
+    <md-input-container class="example-full-width">
+        <input mdInput name="message" [(ngModel)]="message" placeholder="Enter messages" value="{{message}}">
+    </md-input-container>
+
+    <button type="submit">Send</button>
+</form>
