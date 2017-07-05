@@ -31,7 +31,7 @@ Before running the backend, first we will run the ng build command and all the f
 ## ###########
 ## How to run application server
 
-- npm install angular-cli
+- npm install -g @angular/cli
 
 - npm install 
 
